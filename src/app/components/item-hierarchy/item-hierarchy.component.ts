@@ -27,4 +27,8 @@ export class ItemHierarchyComponent implements OnChanges {
   add(item: any) {
     console.log(item);
   }
+
+  delete(item: any) {
+    console.log(item.data.key);
+  }
 }

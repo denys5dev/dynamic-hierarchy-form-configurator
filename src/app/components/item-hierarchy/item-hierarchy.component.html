@@ -8,8 +8,18 @@
   [columnAutoWidth]="true"
   [autoExpandAll]="true"
 >
-  <dxi-column dataField="description"></dxi-column>
-  <dxi-column cellTemplate="cellTemplate" alignment="center" [width]="40"></dxi-column>
+  <dxi-column
+    dataField="description"
+    dataType="string"
+    width="auto"
+  ></dxi-column>
+  <dxi-column
+    dataField=""
+    cellTemplate="cellTemplate"
+    alignment="center"
+    [minWidth]="40"
+    [width]="60"
+  ></dxi-column>
 
   <div *dxTemplate="let data of 'cellTemplate'">
     <div class="actions">
@@ -24,6 +34,12 @@
         text="add child"
         type="default"
         (onClick)="add(data)"
+      ></dx-button>
+      <dx-button
+        stylingMode="contained"
+        text="delete"
+        type="danger"
+        (onClick)="delete(data)"
       ></dx-button>
     </div>
   </div>
