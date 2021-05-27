@@ -1,0 +1,22 @@
+<div *ngIf="item">
+  <div [formGroup]="form">
+    <label [attr.for]="item.key">{{ item.label }}</label>
+
+    <div [ngSwitch]="item.controlType">
+      <dx-text-box
+        *ngSwitchCase="'textBox'"
+        [formControlName]="item.key"
+        [id]="item.key"
+        [isValid]="!isValid"
+      ></dx-text-box>
+
+      <dx-select-box
+        *ngSwitchCase="'dropdown'"
+        [dataSource]="item.options"
+        [formControlName]="item.key"
+        [id]="item.key"
+        [isValid]="!isValid"
+      ></dx-select-box>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+[
+  {
+    "value": "test",
+    "key": "someInput",
+    "label": "some",
+    "required": false,
+    "order": 1,
+    "controlType": "textBox",
+    "type": "text"
+  }
+]
