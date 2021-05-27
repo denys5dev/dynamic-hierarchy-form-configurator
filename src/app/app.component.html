@@ -1,6 +1,8 @@
 <div class="container">
   <div class="wrapper">
-    <div class="item-hierarchy">hierarchy</div>
+    <div class="item-hierarchy">
+      <app-item-hierarchy [items]="items$ | async"></app-item-hierarchy>
+    </div>
     <div class="item-configuration">configuration</div>
   </div>
 

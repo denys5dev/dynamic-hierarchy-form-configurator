@@ -7,16 +7,19 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  background-color: pink;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgreen;
 }
 
 .item-hierarchy {
   flex: 1;
+  padding: 5px;
 }
 
 .item-configuration {
   flex: 1;
+  padding: 5px;
 }
 
 .result {

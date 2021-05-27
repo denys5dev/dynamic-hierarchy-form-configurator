@@ -10,7 +10,9 @@ export class ItemBase<T> {
   controlType: string;
   placeholder: string;
   type: string;
+  description: string;
   options: { key: string; value: string }[];
+  children?: ItemBase<T>[];
 
   constructor(
     options: {
@@ -25,7 +27,9 @@ export class ItemBase<T> {
       order?: number;
       controlType?: string;
       type?: string;
+      description?: string;
       options?: { key: string; value: string }[];
+      children?: ItemBase<T>[];
     } = {}
   ) {
     this.value = options.value;
@@ -39,6 +43,8 @@ export class ItemBase<T> {
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
     this.type = options.type || '';
+    this.description = options.description || '';
     this.options = options.options || [];
+    this.children = options.children || [];
   }
 }

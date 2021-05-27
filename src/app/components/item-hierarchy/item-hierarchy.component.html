@@ -1,0 +1,30 @@
+<dx-tree-list
+  id="employees"
+  [dataSource]="items || []"
+  itemsExpr="children"
+  dataStructure="tree"
+  [showRowLines]="true"
+  [showBorders]="true"
+  [columnAutoWidth]="true"
+  [autoExpandAll]="true"
+>
+  <dxi-column dataField="description"></dxi-column>
+  <dxi-column cellTemplate="cellTemplate" alignment="center" [width]="40"></dxi-column>
+
+  <div *dxTemplate="let data of 'cellTemplate'">
+    <div class="actions">
+      <dx-button
+        stylingMode="contained"
+        text="config"
+        type="success"
+        (onClick)="config(data)"
+      ></dx-button>
+      <dx-button
+        stylingMode="contained"
+        text="add child"
+        type="default"
+        (onClick)="add(data)"
+      ></dx-button>
+    </div>
+  </div>
+</dx-tree-list>

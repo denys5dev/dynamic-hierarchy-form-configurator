@@ -7,6 +7,33 @@
     "errorMessage": "This is required field",
     "order": 1,
     "controlType": "textBox",
-    "type": "text"
+    "type": "text",
+    "description": "some item",
+    "children": [
+      {
+        "value": "testChild1",
+        "key": "someChild",
+        "label": "testChild1",
+        "required": true,
+        "errorMessage": "This is required field",
+        "order": 1,
+        "controlType": "textBox",
+        "type": "testChild1",
+        "description": "test Child1",
+        "children": []
+      }
+    ]
+  },
+  {
+    "value": "test1",
+    "key": "someInput1",
+    "label": "some1",
+    "required": true,
+    "errorMessage": "This is required field",
+    "order": 1,
+    "controlType": "textBox",
+    "type": "text1",
+    "description": "some item1",
+    "children": []
   }
 ]

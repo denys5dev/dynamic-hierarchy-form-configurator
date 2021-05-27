@@ -1,10 +1,10 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
+<form [formGroup]="form">
   <div *ngFor="let item of items" class="form-row">
     <app-dynamic-form-item [item]="item" [form]="form"></app-dynamic-form-item>
   </div>
 
   <div class="form-row">
-    <dx-button type="submit" [disabled]="!form.valid">Save</dx-button>
+    <dx-button (onClick)="onSubmit()" [disabled]="!form.valid">Save</dx-button>
   </div>
 </form>
 
