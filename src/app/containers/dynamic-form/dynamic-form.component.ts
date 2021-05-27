@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { ItemBase } from 'src/app/models/item-base';
 import { ItemControlService } from 'src/app/services/item-control.service';
 
@@ -13,10 +13,7 @@ export class DynamicFormComponent implements OnInit {
   form!: FormGroup;
   payLoad = '';
 
-  constructor(
-    private readonly _service: ItemControlService,
-    private readonly _fb: FormBuilder
-  ) {}
+  constructor(private readonly _service: ItemControlService) {}
 
   ngOnInit() {
     this.form = this._service.toFormGroup(this.items as ItemBase<string>[]);

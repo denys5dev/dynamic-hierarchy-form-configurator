@@ -3,7 +3,8 @@
     "value": "test",
     "key": "someInput",
     "label": "some",
-    "required": false,
+    "required": true,
+    "errorMessage": "This is required field",
     "order": 1,
     "controlType": "textBox",
     "type": "text"

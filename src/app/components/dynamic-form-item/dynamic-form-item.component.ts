@@ -11,9 +11,7 @@ export class DynamicFormItemComponent {
   @Input() item: ItemBase<string>;
   @Input() form: FormGroup;
 
-  get isValid() {
-    {
-      return this.form.controls[this.item.key].valid;
-    }
-  }
+  isValidCallback = () => {
+    return this.form.controls[this.item.key].valid;
+  };
 }
