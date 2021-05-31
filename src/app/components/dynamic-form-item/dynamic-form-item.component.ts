@@ -14,4 +14,8 @@ export class DynamicFormItemComponent {
   isValidCallback = () => {
     return this.form.controls[this.item.key].valid;
   };
+
+  onValueChanged(e: any) {
+    console.log(e);
+  }
 }

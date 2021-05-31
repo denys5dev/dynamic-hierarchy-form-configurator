@@ -1,7 +1,28 @@
 <form [formGroup]="form">
-  <div *ngFor="let item of items" class="form-row">
+  <ng-container
+    *ngTemplateOutlet="recursiveListTmpl; context: { items: items }"
+  ></ng-container>
+  <!-- <div *ngFor="let item of items" class="form-row">
     <app-dynamic-form-item [item]="item" [form]="form"></app-dynamic-form-item>
-  </div>
+  </div> -->
+  <ng-template #recursiveListTmpl let-items="items">
+
+    <div class="form-row" *ngFor="let item of items">
+      <app-dynamic-form-item
+        [item]="item"
+        [form]="form"
+      ></app-dynamic-form-item>
+      <div *ngIf="item.children.length > 0">
+        <ng-container
+          *ngTemplateOutlet="
+            recursiveListTmpl;
+            context: { items: item.children }
+          "
+        >
+        </ng-container>
+      </div>
+    </div>
+  </ng-template>
 
   <div class="form-row">
     <dx-button (onClick)="onSubmit()" [disabled]="!form.valid">Save</dx-button>

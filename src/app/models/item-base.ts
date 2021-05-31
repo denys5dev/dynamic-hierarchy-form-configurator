@@ -12,7 +12,7 @@ export class ItemBase<T> {
   type: string;
   description: string;
   options: { key: string; value: string }[];
-  children?: ItemBase<T>[];
+  children?: ItemBase<T>[] ;
 
   constructor(
     options: {

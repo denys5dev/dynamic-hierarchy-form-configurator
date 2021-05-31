@@ -1,38 +1,63 @@
 [
   {
-    "value": "test",
-    "key": "someInput",
-    "label": "some",
+    "value": "1",
+    "key": "parentFirst",
+    "label": "Select Box",
     "required": true,
     "errorMessage": "This is required field",
     "order": 1,
-    "controlType": "textBox",
+    "controlType": "dropdown",
     "type": "text",
     "description": "some item",
     "children": [
       {
-        "value": "testChild1",
-        "key": "someChild",
-        "label": "testChild1",
+        "value": "child value",
+        "key": "firstChild",
+        "label": "First Child",
         "required": true,
         "errorMessage": "This is required field",
         "order": 1,
         "controlType": "textBox",
-        "type": "testChild1",
+        "type": "text",
         "description": "test Child1",
+        "children": [
+          {
+            "value": "1",
+            "key": "subFirstChild",
+            "label": "Select Box",
+            "required": true,
+            "errorMessage": "This is required field",
+            "order": 1,
+            "controlType": "dropdown",
+            "type": "text",
+            "description": "some item",
+            "children": []
+          }
+        ]
+      },
+      {
+        "value": "1",
+        "key": "secondChildValue",
+        "label": "Just Value",
+        "required": true,
+        "errorMessage": "This is required field",
+        "order": 1,
+        "controlType": "value",
+        "type": "value",
+        "description": "some item",
         "children": []
       }
     ]
   },
   {
-    "value": "test1",
-    "key": "someInput1",
-    "label": "some1",
+    "value": "1",
+    "key": "parentSecond",
+    "label": "Text Box",
     "required": true,
     "errorMessage": "This is required field",
-    "order": 1,
+    "order": 2,
     "controlType": "textBox",
-    "type": "text1",
+    "type": "text",
     "description": "some item1",
     "children": []
   }
