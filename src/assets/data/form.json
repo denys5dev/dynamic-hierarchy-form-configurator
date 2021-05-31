@@ -11,13 +11,13 @@
     "description": "some item",
     "children": [
       {
-        "value": "child value",
+        "value": false,
         "key": "firstChild",
         "label": "First Child",
         "required": true,
         "errorMessage": "This is required field",
         "order": 1,
-        "controlType": "textBox",
+        "controlType": "checkbox",
         "type": "text",
         "description": "test Child1",
         "children": [
